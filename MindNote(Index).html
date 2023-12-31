@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<!---------------------------------------------------->   
+<!--todo------------------------------- Basics HTML -->
+<!---------------------------------------------------->
+    <meta charset="utf-8">
+    <meta name="author" content="Hazem-AbdElgawad">
+    <meta name="description" content="Note">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="Shortcut icon" href="imgs/favicon.ico">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <link href="https://fonts.cdnfonts.com/css/cooper-black" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+<!-------------------------------------------------->
+<!--todo--------------------------------- My Code -->
+<!-------------------------------------------------->
+    <title>MindNote</title>
+    <link rel="shortcut icon" href="logo.ico" type="image/x-icon" />
+    <link rel="Stylesheet" href="MindNote(Style).css">
+
+</head>
+
+<body>
+<!--?-------------------------------------(Website Body)------>
+    <div class="MindNote">
+ <!---------------------------------------------------------------------------------------------->
+<div class="sitName"><img src="Site Name.png" alt="sitName" height="80%" width="30%""></div>
+<!----------------------------------------------------------------------------------------------->
+        <div class="Bar">
+            <nav>
+                <input type="radio" name="tab" id="Dashbord" value="Dashbord">
+                <input type="radio" name="tab" id="Note" value="Note">
+                <input type="radio" name="tab" id="Project" value="Project">
+                <input type="radio" name="tab" id="Profile" value="Profile">
+                <input type="radio" name="tab" id="About" value="About">
+                <label for="Dashbord" class="Dashbord"><a href="#">Dashbord</a></label>
+                <label for="Note" class="Note"><a href="#">Note</a></label>
+                <label for="Project" class="Project"><a href="#">Project</a></label>
+                <label for="Profile" class="Profile"><a href="#">Profile</a></label>
+                <label for="About" class="About"><a href="#">About</a></label>
+                <div class="tab"></div>
+            </nav>
+        </div>
+<!------------------------------------------------------------------->
+<!--*------------------------------------------Page(Dashbord)-------->
+<!------------------------------------------------------------------->
+        <div class="DASHBORD">
+        <h2>Empty</h2>
+        </div>
+<!------------------------------------------------------------------->
+<!--*-------------------------------------------Page(Note)----------->
+<!------------------------------------------------------------------->
+        <div class="NOTE">
+            <div id="app">
+                <textarea class="note"></textarea>
+                <button class="add-note" type="button">+</button>
+              </div>
+        </div>
+<!------------------------------------------------------------------>       
+<!--*------------------------------------------Page(Projict)----------->
+<!------------------------------------------------------------------>
+        <div class="PROJECT">
+            <button id="createProjectButton" onclick="openCreateProjectPopup()">Create Project</button>
+
+            <div id="projectsContainer"></div>
+          
+            <div id="editPopup" class="edit-popup">
+              <label for="editTodoInput">Edit Tod</label>
+              <input type="text" id="editTodoInput">
+              <button onclick="saveEditedTodo()">Save</button>
+            </div>
+          
+            <div id="createProjectPopup" class="edit-popup">
+              <label for="projectName">Project Name</label>
+              <input type="text" id="projectName" required>
+          
+              <button onclick="createProjectFromPopup()">Create Project</button>
+            </div>
+
+        </div>
+<!----------------------------------------------------------------->        
+<!--*-----------------------------------------Page(Profile)-------->
+<!----------------------------------------------------------------->
+        <div class="PROFILE">
+            <div class="userBOX">
+                <p>Hazem00-AG</p>
+            </div>
+            <div class="emailBOX">
+                <p>hazem.abdelgawad00@gmail.com</p>
+            </div>
+            <div  class="passwordBOX">
+                <p>@Hazem20014</p>
+            </div>
+            <a href="#" class="Logout-Link"> Logout </a>
+            ,<img src="Profile.png" class="Pro" alt="profile" height="100px" width="100px">
+        </div>
+
+<!-------------------------------------------------------------------->        
+<!--*--------------------------------------------Page(About)---------->
+<!-------------------------------------------------------------------->
+        <div class="ABOUT">
+         <img src="about.png" alt="logo" height="75%" width="75%">
+        </div>
+<!---------------------------------------------------------------------------->        
+<!--*-------------------------------------------------Page(SginIN-UP)--------->
+<!---------------------------------------------------------------------------->
+        <div class="SginIN-UP_Box">
+            <div class="login-box"><!--!---------------------------(login-box)----->
+                <h2>SGIN IN</h2>
+                <form id="loginForm">
+                    <div class="user-box">
+                        <input type="text" id="loginUsername" name="" required="">
+                        <label>Username</label>
+                    </div>
+                    <div class="user-box">
+                        <input type="password" id="loginPassword"  name="" required="">
+                        <label>Password</label>
+                    </div>
+                    <a href="#" id="loginLink" class="Submit-Link">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        Submit
+                </a>
+                    <a href="#" class="SGINup-Link">SGIN UP</a>
+                </form>
+            </div>
+            <div class="Register-box"><!--!--------------------(Register-box)----->
+                <h2>SGIN UP</h2>
+                <form id="signupForm">
+                    <div class="user-box">
+                        <input type="text" id="name" name="" required="">
+                        <label>Name</label>
+                    </div>
+                    <div class="user-box">
+                        <input type="text" id="username" name="" required="">
+                        <label>Username</label>
+                    </div>
+                    <div class="user-box">
+                        <input type="email" id="email" name="" required="">
+                        <label>Mail</label>
+                    </div>
+                    <div class="user-box">
+                        <input type="password" id="Password" name="" required="">
+                        <label>Password</label>
+                    </div>
+                    <<a href="#" id="signupLink">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        Create
+                    </<a>
+                    <a href="#" class="SGINin-Link"> SGIN IN </a>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="MindNote(JS).js"></script> <!--!-----------------------------(JS)----->
+</body>
+
+</html>
